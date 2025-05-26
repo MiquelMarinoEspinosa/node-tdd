@@ -12,10 +12,20 @@ describe('palindrome checker', () => {
         expect(palindromeChecker).toBeDefined();
     });
 
+
     it('should be able to tell when "mom" is a palindrome', () => {
         expect(palindromeChecker.isAPalindrome('mom')).toBeTruthy();
     });
+
     it('should be able to tell that "bill" is not a palindrome', () => {
         expect(palindromeChecker.isAPalindrome('bill')).toBeFalsy();
+    });
+
+    it('should still detecte a palindrome even if the casting is off', () => {
+        expect(palindromeChecker.isAPalindrome("Mom")).toBeTruthy()
+    });
+
+    it('should be able to tell that "Was It A Rat I Saw"', () => {
+        expect(palindromeChecker.isAPalindrome("Was It A Rat I Saw")).toBeTruthy();
     });
 });
