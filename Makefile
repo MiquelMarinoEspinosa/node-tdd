@@ -22,7 +22,7 @@ up: build run
 shell:
 	docker exec --user node -i -t app.node bash
 
-stop:
+down:
 	docker stop app.node
 
 rm:
