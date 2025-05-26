@@ -14,9 +14,9 @@ make shell
 
 Packages installed
 ```
-pm install --save-dev jest
+npm install --save-dev jest
 npm install --save-dev @babel/preset-typescript
 npm install --save-dev @babel/preset-env
 npm install --save-dev @jest/globals
-npm install @types/jest --save-dev
+npm install --save-dev @types/jest
 ```
