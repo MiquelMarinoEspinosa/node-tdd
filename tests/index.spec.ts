@@ -28,4 +28,8 @@ describe('palindrome checker', () => {
     it('should be able to tell that "Was It A Rat I Saw"', () => {
         expect(palindromeChecker.isAPalindrome("Was It A Rat I Saw")).toBeTruthy();
     });
+
+    it('should be able to tell that "Never Odd or Even" is palindrome', () => {
+        expect(palindromeChecker.isAPalindrome("Never Odd or Even")).toBeTruthy();
+    });
 });
