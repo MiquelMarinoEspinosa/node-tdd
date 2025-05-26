@@ -11,3 +11,10 @@ Access to docker container
 ```
 make shell
 ```
+
+Packages installed
+```
+pm install --save-dev jest
+npm install --save-dev @babel/preset-typescript
+npm install --save-dev @babel/preset-env
+```
