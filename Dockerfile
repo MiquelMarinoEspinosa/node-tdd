@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:current-slim
 
 ARG UNAME=""
 ARG UID=""
@@ -7,7 +7,7 @@ ARG GID=""
 ARG GIT_USER_NAME=""
 ARG GIT_USER_EMAIL=""
 
-RUN apt-get update && apt-get install \
+RUN apt-get update && apt-get install -y \
     git
 
 RUN groupadd -g $GID -o $UNAME
@@ -16,6 +16,6 @@ USER $UNAME
 RUN git config --global user.name ${GIT_USER_NAME}
 RUN git config --global user.email ${GIT_USER_EMAIL}
 RUN git config --global --add safe.directory /app
-ENV PATH="$PATH:/app/Node JS Basics/node_modules/.bin"
+ENV PATH="$PATH:/app/node_modules/.bin"
 
 WORKDIR /app
